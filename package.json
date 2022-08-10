@@ -1,0 +1,11 @@
+{
+  "name": "capture-the-ether",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "author": "https://github.com/GeorgiGeorgiev7",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "hardhat": "^2.10.1"
+  }
+}
