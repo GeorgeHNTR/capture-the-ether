@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const keccak256 = require('keccak256');
 
-describe.only("GuessTheSecretNumberChallenge", async function () {
+describe("GuessTheSecretNumberChallenge", async function () {
     let contract;
 
     before(async function () {
