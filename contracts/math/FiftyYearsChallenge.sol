@@ -1,4 +1,7 @@
+// pragma solidity ^0.4.22;
 pragma solidity ^0.4.21;
+
+// import "hardhat/console.sol";
 
 contract FiftyYearsChallenge {
     struct Contribution {
@@ -37,7 +40,14 @@ contract FiftyYearsChallenge {
 
             contribution.amount = msg.value;
             contribution.unlockTimestamp = timestamp;
+
+            // console.log(msg.value);
+            // console.log(contribution.amount);
             queue.push(contribution);
+            // console.log(msg.value);
+            // console.log(contribution.amount); 
+            //                         ^ incremented by 1 because contribution.amount is a pointer to the queue.length (storage slot )
+            //                         and .push increments the length before pushing the contribution
         }
     }
 
@@ -54,10 +64,11 @@ contract FiftyYearsChallenge {
             delete queue[i];
         }
 
-        // Move the head of the queue forward so we don't have to loop over
-        // already-withdrawn contributions.
+        // // Move the head of the queue forward so we don't have to loop over
+        // // already-withdrawn contributions.
         head = index + 1;
 
+        // console.log(total);
         msg.sender.transfer(total);
     }
 }
