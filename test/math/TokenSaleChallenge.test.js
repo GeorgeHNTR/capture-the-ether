@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe.only("TokenSaleChallenge", async function () {
+describe("TokenSaleChallenge", async function () {
     let contract;
     let player;
 
