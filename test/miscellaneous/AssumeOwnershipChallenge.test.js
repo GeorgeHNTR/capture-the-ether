@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe.only("AssumeOwnershipChallenge", async function () {
+describe("AssumeOwnershipChallenge", async function () {
     let contract;
 
     before(async function () {
