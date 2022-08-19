@@ -10,6 +10,8 @@ describe("PublicKeyChallenge", async function () {
 
     it("Exploit", async function () {
         // WRITE YOUR CODE HERE
+
+        // `accounts` challenges not solved :(
     });
 
     after(async function () {
